@@ -1,7 +1,13 @@
 #Liabraries
 
 #global variables
+board = ["-", "-", "-",
+         "-", "-", "-",
+         "-", "-", "-"]
 
+currentPlayer = "X"
+Winner = None
+gameRunning = True      
 
 
 #game board printing
