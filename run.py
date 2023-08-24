@@ -1,3 +1,19 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+#Liabraries
+
+#global variables
+
+
+
+#game board printing
+
+
+#take player input
+
+#check for win or tie
+
+#switch the player
+
+#check again after switch for win or tie
+
+
+# run the game
