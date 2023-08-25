@@ -1,5 +1,5 @@
-#Liabraries
-
+#import random module for generating random value for 2nd player
+import random
 #global variables
 board = ["-", "-", "-",
          "-", "-", "-",
@@ -143,6 +143,21 @@ def switchPlayer():
     else:
         currentPlayer = "X"    
 
+#switch to computer
+def computer(board):
+    """
+    this function check if current player is 2nd player then generate
+    a random value b/w 0-8 and check if that space is empty then select
+    that spot for 2nd player.so no need to enter values for both players.
+    then switch the player again
+    """
+    while currentPlayer == "O":
+        position = random.randint(0, 8)
+        if board[position] == "-":
+            board[position] = "O"
+            switchPlayer()
+
+
 
 #check again after switch for win or tie
 
@@ -158,4 +173,7 @@ while gameRunning:
     checkIfWin(board)
     checkIfTie(board)
     switchPlayer()
+    computer(board)
+    checkIfWin(board)
+    checkIfTie(board)
     
