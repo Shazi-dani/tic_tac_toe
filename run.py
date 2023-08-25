@@ -133,6 +133,16 @@ def checkIfWin(board):
 
 
 #switch the player
+def switchPlayer():
+    """
+    this function is used for switching between 2 players
+    """
+    global currentPlayer
+    if currentPlayer == "X":
+        currentPlayer = "O"
+    else:
+        currentPlayer = "X"    
+
 
 #check again after switch for win or tie
 
@@ -145,4 +155,7 @@ def checkIfWin(board):
 while gameRunning:
     printBoard(board)
     playerInput(board)
+    checkIfWin(board)
+    checkIfTie(board)
+    switchPlayer()
     
