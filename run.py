@@ -103,6 +103,20 @@ def checkDiag(board):
         winner = board[2]
         return True
 
+# check for tie a game
+
+def checkIfTie(board):
+
+    """
+    define a function which cheks if all the spaces in the game
+    board is filled then stop the game and sho a message that 
+    game is tie
+    """
+    global gameRunning
+    if "-" not in board:
+        printBoard(board)
+        print("It is a tie!")
+        gameRunning = False
 
        
 
