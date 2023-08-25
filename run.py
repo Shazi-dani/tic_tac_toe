@@ -51,7 +51,7 @@ there is There are a total of 8 ways to arrange the same sign and win the game.
 3 in rows,3 in colums and 2 diagonoly.so define 3 different function for checking all possiblities.
 """
 
-def checkrows(board):
+def checkRows(board):
     """
     define a function to check if all the signs are same
     in any row in the board.
@@ -70,7 +70,7 @@ def checkrows(board):
         return True  
 
 
-def checkcolumn(board):
+def checkColumns(board):
     """
     define a function to check all data for the game board
     columns if any column have same data then return true 
@@ -86,7 +86,23 @@ def checkcolumn(board):
 
     elif board[2] == board[5] == board[8] and board[2] != "-":
         winner = board[2]
-        return True             
+        return True      
+
+
+def checkDiag(board):
+    """
+    define a function to check all data for the game board
+    diagonally if any diagonal have same data then return true 
+    """
+    global winner
+    if board[0] == board[4] == board[8] and board[0] != "-":
+        winner = board[0]
+        return True
+
+    elif board[2] == board[4] == board[6] and board[2] != "-":
+        winner = board[2]
+        return True
+
 
        
 
