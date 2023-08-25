@@ -118,7 +118,19 @@ def checkIfTie(board):
         print("It is a tie!")
         gameRunning = False
 
-       
+# check win
+
+def checkIfWin(board):
+    """
+    this function checks return values from checkRows , checkColumns
+    and checkDiag if true then print the winner and stop the game
+    """  
+    global gameRunning 
+    if checkRows(board)  or  checkColumns(board) or checkDiag(board):
+        printBoard(board)
+        print(f"The winner is {winner}!")
+        gameRunning = False
+
 
 #switch the player
 
