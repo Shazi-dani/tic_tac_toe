@@ -30,17 +30,39 @@ def playerInput(board):
     (which showes 9 places in a game board.)
     as a input and also check validation of input.
     """
-    print("Enter a number form 1 to 9.")
-    print("Each number represent a place on game board")
-    print("if you eneter 1 number its shows you selcet first place on the board and so on...")
-    global currentPlayer
-    inp = int(input("Select a spot 1-9: "))
-    if inp <= 0 or inp >=10:
-         print("Invalid number...Input must be 1 to 9")
-    elif inp >= 1 and inp <=9 and board[inp-1] != "-":
-         print("Oops player is already in that spot!")
-    else:
-        board[inp-1] = currentPlayer
+    while True:
+        print("Enter a number form 1 to 9.")
+        print("Each number represent a place on game board")
+        print("if you eneter 1 number its shows you selcet first place on the board and so on...")
+        global currentPlayer
+        inp = int(input("Select a spot 1-9:\n"))
+        if validate_data(inp):
+            board[inp-1] = currentPlayer
+            break
+
+
+
+def validate_data(input):
+    """
+    Inside the try, check if input is a number b/w 1-9 and space is empty
+    Raises ValueError if number is not not b/w 1 -9 or number is any other letter
+    or if place is already filled by other player.
+    """
+        
+    try:
+        
+        if input <= 0 or input >=10:
+
+            raise ValueError(f"Invalid number...Input must be 1 to 9")
+            return False
+        elif input >= 1 and input <=9 and board[input-1] != "-":
+            raise ValueError(f"Oops player is already in that spot!")
+            return False
+    except ValueError as e:
+        print(f"Invalid data: {e},please try again.\n")
+        return False
+
+    return True
 
 
 
