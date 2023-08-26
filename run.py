@@ -151,7 +151,11 @@ def checkIfWin(board):
     if checkRows(board)  or  checkColumns(board) or checkDiag(board):
         printBoard(board)
         print(f"The winner is {winner}!")
-        gameRunning = False
+        inp = str(input("Do you want to play again, type yes or no:\n"))
+        if inp == "yes":
+            gameRunning = True
+        else:
+             gameRunning = False    
 
 
 #switch the player
