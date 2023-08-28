@@ -1,32 +1,33 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# TIC TAC TOE Game
 
-Welcome,
+The Tic Tac Toe Game is very popular and is quite simple in itself.
+There will be one player in a game against the computer. Two signs represent each player. The general signs used in the game are X and O. Finally, there will be a  game board with 9 empty spaces.
+## Here is live version of my project
+![Picture of the website in different devices](assets/images/responsive.img.png)
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+Visit the deployed site: [Tic Tac Toe](https://shazi-dani.github.io/)
+## User Experience (UX)
 
-## Reminders
+### User Stories
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+* As a user, I want to be able to understand how to play this game.all instructions are given in detail when start the game.
 
-## Creating the Heroku app
+## How to Play
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+Tic-tac-toe (American English), noughts and crosses (Commonwealth English), or Xs and Os (Canadian or Irish English) is a paper-and-pencil game for two players who take turns marking the spaces in a three-by-three grid with X or O. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner. It is a solved game, with a forced draw assuming best play from both players.
+you can read more about this game on  [Wikipedie](https://en.wikipedia.org/wiki/Tic-tac-toe)
 
-1. `heroku/python`
-2. `heroku/nodejs`
+## Features
+The game start with the instructions how to play and displaying game board then ask the user inputting number from 1-9.Each number represent a place on game board.
+![Picture of the game board and game instructions](assets/images/)
+user plays against computer.e.g
+if user enter number 1 then "X" sign will take first spot on the board.then computer place "o" sign randomly on the board automatically when user press enter after entering number.
+![Picture of the game board after entering first number](assets/images/)
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+Validation is also done in this game if user enter any other number rather then 1-9 or add any other letter or space is already occupied then user can see a clear error message on the screen which shows how to resolve this errror and game run again and again until user enter valid number.
+# Validation Images
+![Picture of all validation errors](assets/images/responsive.img.png)
 
-Connect your GitHub repository and deploy as normal.
 
-## Constraints
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
----
-
-Happy coding!
