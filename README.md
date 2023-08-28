@@ -51,10 +51,73 @@ Validation Images
 * Update the game with few challanges which makes the game more intresting.
 * User can select any sign on his own choice.
 * Player can play the game with his/her name.
+* Add score board which can store both players scores
 
 ## Technologies Used
 
 ### Languages used
+ * Python
+
+### Frameworks, Libraries & Programs Used
+
+[Github](https://github.com/) - To save and store the files for the game.
+
+[GitPod](https://www.gitpod.io/) - IDE
+
+[Am I Responsive?](http://ami.responsivedesign.is/) To show the website image on a range of devices.
+
+[CI Python Linter](https://pep8ci.herokuapp.com/) For resolving code errors
+
+## Testing
+
+Testing was ongoing throughout the entire build. I have manually tested this game by doing folowing steps:
+
+* Passed the code through PEP8 Linter and confirmed there are no problems
+
+![Picture of PEP8 Linter](assets/images/testing)
+
+* Test input by giving out of range numbers,different symbols or alphebets and gve same number twice.
+
+![Picture of all validation errors](assets/images/responsive.img.png)
+
+* Tested in my local terminal and in Code Institue Heroku Terminal.
+
+### Solved Bugs
+
+* firstlly I find out validation is not working if user enters any alphate then I add a seprate validation fuction and use try and catch method for validation its works for me.all validation are working properlly now.
+* Secondly when game ends user is asked for choice if he/she wants to play game again.if user enter no game ends if user enter yes game will not restert again.its start from the point where its end mean game board is not empty.
+
+![Picture of error](assets/images/)
+
+* then I resolved this Error 
+
+## Credits
+
+* Code Institute without who I would have had no base to begin a project & Readme.md Template. https://codeinstitute.net/ie/
+
+* GitHub for my workspace and saving all my work. https://github.com/
+
+* Gitpod for my coding. https://app.codeanywhere.com/
+
+* The Slack community - for someone always been there no matter the time and with advice or direction. https://slack.com
+
+* Heroku for deploying the project. https://heroku.com
+
+* StackOverflow for all the information to assit with my project .https://stackoverflow.com
+
+* CI Python Linter  For resolving code errors. https://pep8ci.herokuapp.com
+
+* I am Responsive for a fantastic spot to see a visual of responsiveness . https://ui.dev/amiresponsive?url=https://8000-shazidani-gponline-9wlpxvh7fwf.ws-eu99.gitpod.io
+
+
+* Youtube Tutorials and google For getting ideas and inspiration for the game.Instructions on how to right algorithm for game. [Some websites links]
+(https://geekflare.com/tic-tac-toe-python-code)
+(https://www.guru99.com/tic-tac-toe-python.html)
+(https://geekflare.com/tic-tac-toe-python-code)
+
+Copied Code / Code assistance As stated in Technologies / Support Used I used and sort out help and code from numerous sources. Stack over flow and Mentore Support played a huge roll in my overall development.
+
+
 
 
 

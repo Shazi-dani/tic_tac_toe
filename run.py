@@ -1,9 +1,16 @@
 # import random module for generating random value for 2nd player
 import random
-# global variables
-board = ["-", "-", "-",
+
+# define a function which will set the board vales
+
+
+def setBoard():
+    return ["-", "-", "-",
          "-", "-", "-",
          "-", "-", "-"]
+
+# global variables
+board = setBoard()
 
 currentPlayer = "X"
 
@@ -209,6 +216,7 @@ def computer(board):
     via the terminal, and run all program functions
 """
 def gameStart():
+    board = setBoard()
     while gameRunning:
         printBoard(board)
         playerInput(board)
