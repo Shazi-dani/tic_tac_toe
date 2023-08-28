@@ -153,8 +153,9 @@ def checkIfTie(board):
 
 def checkIfWin(board):
     """
-    this function checks return values from checkRows , checkColumns
-    and checkDiag if true then print the winner and stop the game
+    this function checks return values from checkRows, checkColumns
+    and checkDiag if true then print the winner and ask the player
+    "do you want to play agaain" the game
     """
     global gameRunning
     if checkRows(board) or checkColumns(board) or checkDiag(board):
@@ -163,7 +164,7 @@ def checkIfWin(board):
         inp = str(input("Do you want to play again, type yes or no:\n"))
         play_again = inp.lower()
         if play_again == "yes":
-            gameRunning = True
+            gameStart()
         elif play_again == "no":
             gameRunning = False
         else:
@@ -207,12 +208,16 @@ def computer(board):
     Run a while loop to collect a valid data from the user
     via the terminal, and run all program functions
 """
-while gameRunning:
-    printBoard(board)
-    playerInput(board)
-    checkIfWin(board)
-    checkIfTie(board)
-    switchPlayer()
-    computer(board)
-    checkIfWin(board)
-    checkIfTie(board)
+def gameStart():
+    while gameRunning:
+        printBoard(board)
+        playerInput(board)
+        checkIfWin(board)
+        checkIfTie(board)
+        switchPlayer()
+        computer(board)
+        checkIfWin(board)
+        checkIfTie(board)
+
+
+gameStart()
