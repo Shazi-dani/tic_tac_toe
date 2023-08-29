@@ -138,11 +138,19 @@ def checkIfTie(board):
     board is filled then stop the game and sho a message that
     game is tie
     """
-    global gameRunning
+    
     if "-" not in board:
         printBoard(board)
         print("It is a tie!")
-        gameRunning = False
+        inp = str(input("Do you want to play again, type yes or no:\n"))
+        play_again = inp.lower()
+        if play_again == "yes":
+            gameStart()
+        elif play_again == "no":
+            exit()
+        else:
+            print("Your input does not match requirements.\nYou need to either type 'yes' or 'no' please try again")
+            print("")
 
 # check win
 
@@ -153,7 +161,7 @@ def checkIfWin(board):
     and checkDiag if true then print the winner and ask the player
     "do you want to play agaain" the game
     """
-    global gameRunning
+    
     if checkRows(board) or checkColumns(board) or checkDiag(board):
         printBoard(board)
         print(f"The winner is {winner}!")
