@@ -135,6 +135,13 @@ Testing was ongoing throughout the entire build. I have manually tested this gam
 
 * ![Picture of error](assets/image/empty_winner_error.png)
 
+when I checked the code then find out that I did a mistake in check coulums function add board[2] != "-" intead of board[1].as shown below in the code
+
+ elif board[1] == board[4] == board[7] and board[2] != "-":
+        winner = board[1]
+        return True
+
+so resolved this bugs by adding code (board[1] != "-").
 
 
 ### Remaining Bugs

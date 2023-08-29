@@ -105,7 +105,7 @@ def checkColumns(board):
         winner = board[0]
         return True
 
-    elif board[1] == board[4] == board[7] and board[2] != "-":
+    elif board[1] == board[4] == board[7] and board[1] != "-":
         winner = board[1]
         return True
 
