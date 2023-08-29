@@ -14,7 +14,7 @@ board = setBoard()
 
 currentPlayer = "X"
 
-Winner = None
+winner = None
 
 gameRunning = True
 
@@ -45,7 +45,7 @@ def playerInput(board):
     while True:
         print("Enter a number form 1 to 9.")
         print("Each number represent a place on game board")
-        print(" Number 1 shows you selcet first place on the board")
+        print("Number 1 shows you selcet first place on the board")
         global currentPlayer
         try:
             inp = int(input("Select a spot 1-9:\n"))
@@ -165,15 +165,18 @@ def checkIfWin(board):
     if checkRows(board) or checkColumns(board) or checkDiag(board):
         printBoard(board)
         print(f"The winner is {winner}!")
-        inp = str(input("Do you want to play again, type yes or no:\n"))
-        play_again = inp.lower()
-        if play_again == "yes":
-            gameStart()
-        elif play_again == "no":
-            exit()
-        else:
-            print("Your input does not match requirements.\nYou need to either type 'yes' or 'no' please try again")
-            print("")
+        while True:
+            inp = str(input("Do you want to play again, type yes or no:\n"))
+            play_again = inp.lower()
+            if play_again == "yes":
+                gameStart()
+                break
+            elif play_again == "no":
+                exit()
+            else:
+                print("Your input does not match requirements.\nYou need to either type 'yes' or 'no' please try again")
+                print("")
+                continue
 
 
 
@@ -214,6 +217,7 @@ def computer(board):
 """
 def gameStart():
     board = setBoard()
+    winner = None
     while gameRunning:
         printBoard(board)
         playerInput(board)
