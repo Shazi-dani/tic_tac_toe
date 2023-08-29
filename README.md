@@ -11,6 +11,19 @@ Visit the deployed site: [Tic Tac Toe](https://shazi-dani.github.io/)
 ### User Stories
 
 * As a user, I want to be able to understand how to play this game.all instructions are given in detail when start the game.
+As a User, I want to be able to start a new game of Tic Tac Toe, so that I can begin playing from a fresh board.
+
+* As a User, I want the game to indicate whose turn it is (X or O), so that I know when to make my move.
+
+* As a User, I want the game to check and prevent illegal moves, such as placing a symbol on an already occupied spot, to ensure fair gameplay.
+
+* As a User, I want the game to automatically switch turns between X and O after each move, so that the game progresses smoothly.
+
+* As a User, I want the game to detect and announce a winner when a player has achieved a winning pattern (3 in a row, column, or diagonal), so that I know the game outcome.
+
+* As a User, I want the game to detect and announce a Tie when there is no space left in a game board, so that I know the game outcome.
+
+* As a User, I want the option to play again once a game is complete.
 
 ## How to Play
 
@@ -106,12 +119,26 @@ Testing was ongoing throughout the entire build. I have manually tested this gam
 
 ### Solved Bugs
 
-* firstlly I find out validation is not working if user enters any alphbate game crash then I add a seprate validation fuction and use try and catch method for validation its works for me.all validation are working properlly now.
-* Secondly when game ends user is asked for choice if he/she wants to play game again.if user enter no game ends if user enter yes game will not restert again.its start from the point where its end mean game board is not empty.
+1- firstlly I find out validation is not working if user enters any alphbate game crash then I add a seprate validation fuction and use try and catch method for validation its works for me.all validation are working properlly now.
+2- Secondly when game ends user is asked for choice if he/she wants to play game again.if user enter no game ends if user enter yes game will not restert again.its start from the point where its end mean game board is not empty.as shown in picture below
 
-![Picture of error](assets/images/)
+![Picture of error](assets/image/game_restart_error.png)
 
 * then I resolved this Error by adding new function in the code setboard() which will reset game when user wants to play game again
+
+3- I findout out that when game ends and user asked for play game again yes/no option when user enter anyother date then yes/no validation dosenot work properly its prints the message that input must be yes/no but start the game again where its ends and user was asked for input again.as shown in picture below
+* ![Picture of error](assets/image/restart_validation_error.png)
+
+* I resolved this error by adding while loop in chekif win and checkiftie function its will ask the user for input until valid input(yes/no) given
+
+4- During manual testing i findout one more error some time when game ends and user enter yes when game restart and user is asked for enetering number so when user enter any valid number game automtically declare empty space a winner.as shown in the picture below.
+
+* ![Picture of error](assets/image/empty_winner_error.png)
+
+
+
+### Remaining Bugs
+* No Bugs remaining
 
 ## Credits
 

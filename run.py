@@ -142,15 +142,18 @@ def checkIfTie(board):
     if "-" not in board:
         printBoard(board)
         print("It is a tie!")
-        inp = str(input("Do you want to play again, type yes or no:\n"))
-        play_again = inp.lower()
-        if play_again == "yes":
-            gameStart()
-        elif play_again == "no":
-            exit()
-        else:
-            print("Your input does not match requirements.\nYou need to either type 'yes' or 'no' please try again")
-            print("")
+        while True:
+            inp = str(input("Do you want to play again, type yes or no:\n"))
+            play_again = inp.lower()
+            if play_again == "yes":
+                gameStart()
+                break
+            elif play_again == "no":
+                exit()
+            else:
+                print("Your input does not match requirements.\nYou need to either type 'yes' or 'no' please try again")
+                print("")
+                continue
 
 # check win
 
