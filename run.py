@@ -1,13 +1,13 @@
 # import random module for generating random value for 2nd player
+
 import random
 
-# define a function which will set the board vales
-
+# define a function which will set the board values
 
 def setBoard():
     return ["-", "-", "-",
-         "-", "-", "-",
-         "-", "-", "-"]
+        "-", "-", "-",
+        "-", "-", "-"]
 
 # global variables
 board = setBoard()
@@ -47,35 +47,24 @@ def playerInput(board):
         print("Each number represent a place on game board")
         print(" Number 1 shows you selcet first place on the board")
         global currentPlayer
-        inp = int(input("Select a spot 1-9:\n"))
-        if validate_data(inp):
-            board[inp-1] = currentPlayer
-            break
+        try:
+            inp = int(input("Select a spot 1-9:\n"))
+            if inp >= 1 and inp <= 9 and board[inp-1] == "-":
+                board[inp-1] = currentPlayer
+                break
 
+            elif inp >= 1 and inp <= 9 and board[inp-1] != "-":
+                print(f"Oops player is already in that spot!")
+                continue
 
-def validate_data(input):
+            elif inp <= 0 or inp >= 10:
+                print(f"Invalid number...Input must be 1 to 9")
+                continue 
 
-    """
-    Inside the try, check if input is a number b/w 1-9 and space is empty
-    Raises ValueError if number is not not b/w 1 -9
-    or number is any other letter
-    or if place is already filled by other player.
-    """
-
-    try:
-
-        if input <= 0 or input >= 10:
-
-            raise ValueError(f"Invalid number...Input must be 1 to 9")
-            return False
-        elif input >= 1 and input <= 9 and board[input-1] != "-":
-            raise ValueError(f"Oops player is already in that spot!")
-            return False
-    except ValueError as e:
-        print(f"Invalid data: {e},please try again.\n")
-        return False
-
-    return True
+        except ValueError:
+            print(f"Invalid data,please try again.\n")
+            continue
+    
 
 
 # check for win or tie
@@ -173,7 +162,7 @@ def checkIfWin(board):
         if play_again == "yes":
             gameStart()
         elif play_again == "no":
-            gameRunning = False
+            exit()
         else:
             print("Your input does not match requirements.\nYou need to either type 'yes' or 'no' please try again")
             print("")

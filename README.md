@@ -84,12 +84,12 @@ Testing was ongoing throughout the entire build. I have manually tested this gam
 
 ### Solved Bugs
 
-* firstlly I find out validation is not working if user enters any alphate then I add a seprate validation fuction and use try and catch method for validation its works for me.all validation are working properlly now.
+* firstlly I find out validation is not working if user enters any alphbate game crash then I add a seprate validation fuction and use try and catch method for validation its works for me.all validation are working properlly now.
 * Secondly when game ends user is asked for choice if he/she wants to play game again.if user enter no game ends if user enter yes game will not restert again.its start from the point where its end mean game board is not empty.
 
 ![Picture of error](assets/images/)
 
-* then I resolved this Error 
+* then I resolved this Error by adding new function in the code setboard() which will reset game when user wants to play game again
 
 ## Credits
 
