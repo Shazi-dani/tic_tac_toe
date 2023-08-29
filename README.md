@@ -29,21 +29,43 @@ you can read more about this game on  [Wikipedie](https://en.wikipedia.org/wiki/
 
 ## Features
 * The game start with the instructions how to play and displaying game board then ask the user inputting number from 1-9.Each number represent a place on game board.
-![Picture of the game board and game instructions](assets/images/)
+
+* ![Picture of the game board and game instructions](assets/image/gamestart_img.png)
 
 * user plays against computer.e.g
 if user enter number 1 then "X" sign will takes first spot on the board.then computer place "O" sign randomly on the board automatically when user press enter after entering number.
-![Picture of the game board after entering first number](assets/images/)
+
+* ![Picture of the game board after entering number](assets/image/how_to_play_img.png)
 
 
 * Validation is also done in this game if user enter any other number rather then 1-9 or add any other letter or space is already occupied then user can see a clear error message on the screen which shows how to resolve this errror and game run again and again until user enters valid number.
-Validation Images
+### Validation Images
+1- validation error when user enter any other number then 1-9
 
-![Picture of all validation errors](assets/images/responsive.img.png)
+* ![Picture of validation errors](assets/image/validation1_img.png)
+
+2- validation error image when user enter any alphabate 
+
+* ![Picture of validation errors](assets/image/validation2_img.png)
+
+3- validation error when user enter that number which is not empty.
+
+* ![Picture of validation errors](assets/image/validation3_img.png)
 
 * Restar Game: When game ends user can see an option " Do you want to play again then according to user input game end or restart again.
 
-![Picture of game ending stage](assets/images/responsive.img.png)
+1- if user enters "yes" game will restart. 
+
+* ![Picture of game ending stage](assets/image/yes_img.png)
+
+2- if user enters "no" game will end. 
+
+* ![Picture of game ending stage](assets/image/no_img.png)
+
+## Tie
+The game goes on until a player wins the game or it ended up in a draw by filling all boxes without a winning match.
+
+* ![Picture of game ending stage](assets/image/tie_img.png)
 
 
 ## Future Implementations
