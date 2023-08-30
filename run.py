@@ -1,15 +1,18 @@
-# import random module for generating random value for 2nd player
+# import random module for generating random values for 2nd player
 
 import random
 
 # define a function which will set the board values
 
+
 def setBoard():
     return ["-", "-", "-",
-        "-", "-", "-",
-        "-", "-", "-"]
+            "-", "-", "-",
+            "-", "-", "-"]
 
 # global variables
+
+
 board = setBoard()
 
 currentPlayer = "X"
@@ -59,12 +62,11 @@ def playerInput(board):
 
             elif inp <= 0 or inp >= 10:
                 print(f"Invalid number...Input must be 1 to 9")
-                continue 
+                continue
 
         except ValueError:
             print(f"Invalid data,please try again.\n")
             continue
-    
 
 
 # check for win or tie
@@ -138,7 +140,7 @@ def checkIfTie(board):
     board is filled then stop the game and sho a message that
     game is tie
     """
-    
+
     if "-" not in board:
         printBoard(board)
         print("It is a tie!")
@@ -151,8 +153,8 @@ def checkIfTie(board):
             elif play_again == "no":
                 exit()
             else:
-                print("Your input does not match requirements.\nYou need to either type 'yes' or 'no' please try again")
-                print("")
+                print("Your input does not match requirements.")
+                print("You need to either type 'yes' or 'no' please try again")
                 continue
 
 # check win
@@ -164,7 +166,7 @@ def checkIfWin(board):
     and checkDiag if true then print the winner and ask the player
     "do you want to play agaain" the game
     """
-    
+
     if checkRows(board) or checkColumns(board) or checkDiag(board):
         printBoard(board)
         print(f"The winner is {winner}!")
@@ -177,10 +179,9 @@ def checkIfWin(board):
             elif play_again == "no":
                 exit()
             else:
-                print("Your input does not match requirements.\nYou need to either type 'yes' or 'no' please try again")
-                print("")
+                print("Your input does not match requirements.")
+                print("You need to either type 'yes' or 'no' please try again")
                 continue
-
 
 
 # switch the player
@@ -218,6 +219,8 @@ def computer(board):
     Run a while loop to collect a valid data from the user
     via the terminal, and run all program functions
 """
+
+
 def gameStart():
     board = setBoard()
     winner = None

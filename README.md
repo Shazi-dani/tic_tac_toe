@@ -3,9 +3,9 @@
 The Tic Tac Toe Game is very popular and is quite simple in itself.
 There will be one player in a game against the computer. Two signs represent each player. The general signs used in the game are X and O. Finally, there will be a  game board with 9 empty spaces.
 ## Here is live version of my project
-![Picture of the website in different devices](assets/images/responsive.img.png)
+![Picture of the website in different devices](assets/image/diff-screen-img.png)
 
-Visit the deployed site: [Tic Tac Toe](https://shazi-dani.github.io/)
+Visit the deployed site: [Tic Tac Toe](https://game-tic-tac-toe-267668f1caeb.herokuapp.com/)
 ## User Experience (UX)
 
 ### User Stories
@@ -109,11 +109,24 @@ Testing was ongoing throughout the entire build. I have manually tested this gam
 
 * Passed the code through PEP8 Linter and confirmed there are no problems
 
-![Picture of PEP8 Linter](assets/images/testing)
+![Picture of PEP8 Linter](assets/image/testing_img.png)
 
 * Test input by giving out of range numbers,different symbols or alphebets and gve same number twice.
 
-![Picture of all validation errors](assets/images/responsive.img.png)
+* ![Picture of validation errors](assets/image/validation1_img.png)
+
+2- validation error image when user enter any alphabate 
+
+* ![Picture of validation errors](assets/image/validation2_img.png)
+
+3- validation error when user enter that number which is not empty.
+
+* ![Picture of validation errors](assets/image/validation3_img.png)
+
+4- Validation error when game tie.
+
+* ![Picture of validation errors](assets/image/tie-validation.png)
+
 
 * Tested in my local terminal and in Code Institue Heroku Terminal.
 
